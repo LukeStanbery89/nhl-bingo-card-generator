@@ -2,38 +2,54 @@ import React from 'react';
 import './App.css';
 
 let choices = [
-    'Hooking penalty',
-    'Roughing penalty',
-    'High sticking penalty',
-    'Cross checking penalty',
-    'Cross checking penalty',
-    'Tripping penalty',
-    'Delay of game penalty',
-    'Too many men penalty',
-    'Interference penalty',
-    'Boarding penalty',
+    // Car manufacturers
+    'BMW',
+    'CHEVY',
+    'FORD',
+    'GENERAL MOTORS',
+    'HONDA',
+    'HYUNDAI',
+    'KIA',
+    'NISSAN',
+    'TOYOTA',
 
-    '5-on-5 goal',
-    'Short handed goal',
-    'PPG',
-    'Even numbered jersey scores goal',
-    'Odd numbered jersey scores goal',
-    'Defenseman scores goal',
+    // Beer
+    'BUDWEISER',
+    'BUSCH',
+    'COORS',
+    'HARD SELTZER (ANY BRAND)',
+    'MILLER',
+    'MICHELOB',
+    'SAM ADAMS',
 
-    'Broken stick',
-    'Timeout',
-    'Offside',
-    'OT',
-    'Goal or play under reviewed',
-    'Connor McDavid is mentioned',
-    'Pierre McGuire appears on screen',
-    'Tie game after 0-0',
-    '"Get pucks deep"',
-    'Car commercial',
-    'Goalie drinks from water bottle',
+    // Beverages
+    'PEPSI',
+    'COKE',
+
+    // Food
+    'DORITOS',
+    'LAYS',
+    'HELLMAN\'S',
+
+    // Other
+    'AMAZON',
+    'AT&T',
+    'BIC',
+    'BOOKING.COM',
+    'CARVANA',
+    'CLICKUP',
+    'EXPEDIA',
+    'PLANET FITNESS',
+    'PLANTER\'S',
+    'RAKUTEN',
+    'SQUARESPACE',
+    'SALESFORCE',
+    'SAM\'S CLUB',
+    'UBER EATS',
+    'VRBO',
+    'VROOM',
+    'WALLBOX',
 ];
-
-let used = [];
 
 let bingoCard = [
     [],
