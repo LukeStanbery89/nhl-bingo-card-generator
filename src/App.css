@@ -3,14 +3,18 @@ table {
 }
 table th {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 30px;
 }
 table td {
-  font-size: 20px;
+  font-size: 14px;
 }
 table th, table td {
-  width: 20%;
   border: 2px solid #000;
   text-align: center;
-  height: 170px;
+  height: 110px;
+  padding: 5px;
+  
+  img {
+    margin: 0 40px;
+  }
 }
