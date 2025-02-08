@@ -1,56 +1,11 @@
 import React from 'react';
 import './App.css';
+import choices from './config/choices.json';
 
-let choices = [
-    // Car manufacturers
-    'BMW',
-    'CHEVY',
-    'FORD',
-    'GENERAL MOTORS',
-    'HONDA',
-    'HYUNDAI',
-    'KIA',
-    'NISSAN',
-    'TOYOTA',
+const EVENT = 'superbowl';
 
-    // Beer
-    'BUDWEISER',
-    'BUSCH',
-    'COORS',
-    'HARD SELTZER (ANY BRAND)',
-    'MILLER',
-    'MICHELOB',
-    'SAM ADAMS',
-
-    // Beverages
-    'PEPSI',
-    'COKE',
-
-    // Food
-    'DORITOS',
-    'LAYS',
-    'HELLMAN\'S',
-
-    // Other
-    'AMAZON',
-    'AT&T',
-    'BIC',
-    'BOOKING.COM',
-    'CARVANA',
-    'CLICKUP',
-    'EXPEDIA',
-    'PLANET FITNESS',
-    'PLANTER\'S',
-    'RAKUTEN',
-    'SQUARESPACE',
-    'SALESFORCE',
-    'SAM\'S CLUB',
-    'UBER EATS',
-    'VRBO',
-    'VROOM',
-    'WALLBOX',
-];
-
+// eslint-disable-next-line
+let choicesFiltered = choices[EVENT];
 let bingoCard = [
     [],
     [],
@@ -70,10 +25,10 @@ const compileBingoCard = () => {
 };
 
 function getRandomBingoChoice() {
-    const choicesCopy = [...choices];
-    let key = Math.floor(Math.random() * choices.length);
+    const choicesCopy = [...choices[EVENT]];
+    let key = Math.floor(Math.random() * choicesCopy.length);
 
-    choices = choices.filter(choice => choice !== choices[key]);
+    choicesFiltered = choicesCopy.filter(choice => choice !== choicesCopy[key]);
     return choicesCopy[key];
 }
 
