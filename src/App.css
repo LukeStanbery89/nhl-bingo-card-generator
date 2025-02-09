@@ -4,6 +4,7 @@ table {
 table th {
   font-weight: bold;
   font-size: 50px;
+  text-transform: uppercase;
 }
 table td {
   font-size: 20px;

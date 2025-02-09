@@ -5,7 +5,8 @@ import choices from './config/choices.json';
 const EVENT = 'superbowl';
 
 // eslint-disable-next-line
-let choicesFiltered = choices[EVENT];
+const title = choices[EVENT]["title"];
+let unusedChoices = [...choices[EVENT]["choices"]];
 let bingoCard = [
     [],
     [],
@@ -25,11 +26,10 @@ const compileBingoCard = () => {
 };
 
 function getRandomBingoChoice() {
-    const choicesCopy = [...choices[EVENT]];
-    let key = Math.floor(Math.random() * choicesCopy.length);
-
-    choicesFiltered = choicesCopy.filter(choice => choice !== choicesCopy[key]);
-    return choicesCopy[key];
+    let key = Math.floor(Math.random() * unusedChoices.length);
+    const result = unusedChoices[key];
+    unusedChoices = unusedChoices.filter(choice => choice !== unusedChoices[key]);
+    return result;
 }
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
                             <th colSpan="5" align="right" style={nameStyles}>Name: ______________________________</th>
                         </tr>
                         <tr>
-                            <th colSpan="5">SUPER BOWL COMMERCIAL BINGO</th>
+                            <th colSpan="5">{ title }</th>
                         </tr>
                     </thead>
                     <tbody>
